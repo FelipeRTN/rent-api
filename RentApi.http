@@ -1,0 +1,48 @@
+@RentApi_HostAddress = http://localhost:5000
+
+GET {{RentApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Users API
+GET {{RentApi_HostAddress}}/api/users
+Accept: application/json
+
+###
+
+POST {{RentApi_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "João Silva",
+  "email": "joao@email.com",
+  "type": 1
+}
+
+###
+
+GET {{RentApi_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+
+# Properties API
+GET {{RentApi_HostAddress}}/api/properties
+Accept: application/json
+
+###
+
+POST {{RentApi_HostAddress}}/api/properties
+Content-Type: application/json
+
+{
+  "address": "Rua das Flores, 123",
+  "price": 1500.00,
+  "landlordId": 1
+}
+
+###
+
+GET {{RentApi_HostAddress}}/api/properties/1
+Accept: application/json
